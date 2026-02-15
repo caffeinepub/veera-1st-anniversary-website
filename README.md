@@ -1,2 +1,3 @@
-# veera-1st-anniversary-website
-Exported from Caffeine project: VEERA 1st Anniversary Website
+## VEERA 1st Anniversary Website
+
+To run app build and run docker image: `docker build -t app . docker run -it --network host app`

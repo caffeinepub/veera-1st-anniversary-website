@@ -1,0 +1,55 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "Create a cute, book-aesthetic anniversary website celebrating the user's 1st year relationship, personalized for VEERA.",
+  "architectural_notes": [],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Cute storybook-style book cover illustration with hearts/flowers and a warm cream/tan palette (anniversary-cover.dim_1600x900.png)\n- Seamless subtle paper texture background, warm off-white with light grain (paper-texture.dim_2048x2048.png)\n- Set of 6 small cute doodle icons in the same style (heart, flower, star, ribbon, bookmark, sparkle) on transparent background (doodles-set.dim_1024x1024.png)",
+  "existing_features": [
+    {
+      "id": "feature-create-a-single-page-anniversary-website-that-celebrates-the-user-s-1st-completed-year-of-relationship-and-explicitly-includes-the-name-veera-in-the-hero-message",
+      "title": "Create a single-page anniversary website that celebrates the user's 1st completed year of relationship and explicitly includes the name “VEERA” in the hero message.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-book-inspired-ui-layout-a-cover-section-and-multiple-pages-that-the-user-can-navigate-through-e-g-next-previous-buttons-or-page-indicators-with-a-cute-aesthetic",
+      "title": "Implement a book-inspired UI layout: a ‘cover’ section and multiple ‘pages’ that the user can navigate through (e.g., next/previous buttons or page indicators), with a cute aesthetic.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-coherent-visual-theme-and-styling-system-consistent-across-the-site-colors-typography-spacing-components-that-matches-a-cute-cozy-book-paper-aesthetic-avoid-blue-purple-as-primary-colors",
+      "title": "Add a coherent visual theme and styling system consistent across the site (colors, typography, spacing, components) that matches a cute, cozy, book/paper aesthetic (avoid blue/purple as primary colors).",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-include-lightweight-decorative-visuals-e-g-book-cover-illustration-subtle-paper-texture-background-small-doodle-icons-as-static-assets-and-use-them-in-the-ui",
+      "title": "Include lightweight decorative visuals (e.g., book cover illustration, subtle paper texture background, small doodle icons) as static assets and use them in the UI.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Build a cute book-aesthetic 1-year anniversary website personalized with girlfriend name VEERA and celebration message.",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "VEERA 1st Anniversary Website",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

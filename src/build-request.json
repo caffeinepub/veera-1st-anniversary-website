@@ -1,0 +1,109 @@
+{
+  "kind": "build_request",
+  "title": "Cute book-aesthetic 1-year anniversary website for VEERA",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Create a single-page anniversary website that celebrates the user's 1st completed year of relationship and explicitly includes the name “VEERA” in the hero message.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Create an website for my gf to wish her our 1st complete year celebration the website should bhe book asthetic and cute her name is VEERA and we completed 1sf year of your relationship"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Landing view contains the name “VEERA” prominently.",
+        "Landing view clearly states it is a 1-year anniversary/1st year celebration message in English.",
+        "All user-facing text is in English."
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Implement a book-inspired UI layout: a ‘cover’ section and multiple ‘pages’ that the user can navigate through (e.g., next/previous buttons or page indicators), with a cute aesthetic.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "the website should bhe book asthetic and cute"
+        ]
+      },
+      "acceptanceCriteria": [
+        "UI includes a distinct cover-like first view and at least 3 inner pages (e.g., Message, Memories, Closing).",
+        "User can navigate between pages with clear controls (Next/Previous and/or page dots).",
+        "Page transitions feel book-like (e.g., page flip/slide) and are responsive on mobile and desktop."
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Add a coherent visual theme and styling system consistent across the site (colors, typography, spacing, components) that matches a cute, cozy, book/paper aesthetic (avoid blue/purple as primary colors).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "book asthetic and cute"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Theme uses warm/cozy tones (e.g., cream, tan, soft browns) with consistent typography resembling a storybook/handwritten feel.",
+        "All pages share consistent component styling (buttons, headings, cards/panels).",
+        "Design is accessible: text contrast is readable and layout works on small screens."
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Include lightweight decorative visuals (e.g., book cover illustration, subtle paper texture background, small doodle icons) as static assets and use them in the UI.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Generated images are stored under frontend/public/assets/generated and referenced directly by the frontend (no backend image serving).",
+        "At least one decorative image appears on the cover and at least one subtle texture/background element appears on inner pages.",
+        "Images are optimized for web display and do not break layout on mobile."
+      ]
+    }
+  ],
+  "constraints": [
+    "Use the existing React + TypeScript + Tailwind + React Query stack.",
+    "Do not edit files under frontend/src/components/ui or any frontend immutable paths specified by the platform.",
+    "Keep backend as a single Motoko actor; only add backend logic if strictly necessary for this static site."
+  ],
+  "nonGoals": [
+    "User accounts or Internet Identity authentication.",
+    "External APIs, databases, or third-party integrations.",
+    "Payments, messaging, email sending, or real-time features."
+  ],
+  "imageRequirements": {
+    "required": [
+      "Cute storybook-style book cover illustration with hearts/flowers and a warm cream/tan palette (anniversary-cover.dim_1600x900.png)",
+      "Seamless subtle paper texture background, warm off-white with light grain (paper-texture.dim_2048x2048.png)",
+      "Set of 6 small cute doodle icons in the same style (heart, flower, star, ribbon, bookmark, sparkle) on transparent background (doodles-set.dim_1024x1024.png)"
+    ],
+    "edits": []
+  },
+  "userProfileUpdate": {
+    "goalsToAdd": [],
+    "goalsToRemove": [],
+    "preferencesToAdd": [
+      "Cute, book-aesthetic anniversary website design"
+    ],
+    "preferencesToRemove": [],
+    "miscToAdd": [
+      "Girlfriend name: VEERA",
+      "Occasion: 1st year relationship anniversary"
+    ],
+    "miscToRemove": [],
+    "fieldsToSet": {},
+    "fieldsToDelete": []
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-15T17:22:16.103Z",
+  "summary": "Implements a single-page React “book” with a cover plus 3 inner pages, warm book-like theme, navigation controls, and references to two generated image assets. However, required generated images are not shown as added under the specified public assets path, and the required paper texture background is not used. Also adds authentication/actor hooks and a promotional footer that were not requested.",
+  "missing_requirements": [
+    {
+      "id": "REQ-4",
+      "requirement": "Include lightweight decorative visuals as static assets stored under frontend/public/assets/generated and use them in the UI (cover illustration, paper texture background, doodle icons).",
+      "reason": "The UI references /assets/generated/anniversary-cover.dim_1600x900.png and /assets/generated/doodles-set.dim_1024x1024.png, but the diff summary does not show the actual image files being added under frontend/public/assets/generated. Additionally, the required paper texture image is not referenced/used anywhere in the added frontend components or styles.",
+      "evidence": [
+        "frontend/src/components/book/pages/CoverPage.tsx (references /assets/generated/anniversary-cover.dim_1600x900.png)",
+        "frontend/src/components/book/pages/MemoriesPage.tsx (references /assets/generated/doodles-set.dim_1024x1024.png)",
+        "frontend/src/index.css (no reference to paper texture)"
+      ]
+    }
+  ],
+  "hallucinated_features": [
+    {
+      "description": "Internet Identity authentication context and actor-creation logic via React Query hooks.",
+      "reason": "BuildRequest non-goals explicitly exclude user accounts/Internet Identity; the site is described as static and should only add backend logic if strictly necessary.",
+      "evidence": [
+        "frontend/src/main.tsx (wraps app in InternetIdentityProvider)",
+        "frontend/src/hooks/useInternetIdentity.ts",
+        "frontend/src/hooks/useActor.ts"
+      ]
+    },
+    {
+      "description": "caffeine.ai attribution footer with outbound referral link.",
+      "reason": "Not requested in requirements; introduces extra user-facing content and an external link.",
+      "evidence": [
+        "frontend/src/App.tsx"
+      ]
+    }
+  ],
+  "confidence": 0.72,
+  "changed_files": [
+    "all_files_summary.json",
+    "backend/main.mo",
+    "frontend-file-summaries.txt",
+    "frontend/index.css",
+    "frontend/index.html",
+    "frontend/src/App.tsx",
+    "frontend/src/components/book/Book.tsx",
+    "frontend/src/components/book/pages/ClosingPage.tsx",
+    "frontend/src/components/book/pages/CoverPage.tsx",
+    "frontend/src/components/book/pages/MemoriesPage.tsx",
+    "frontend/src/components/book/pages/MessagePage.tsx",
+    "frontend/src/hooks/useActor.ts",
+    "frontend/src/hooks/useInternetIdentity.ts",
+    "frontend/src/hooks/useQueries.ts",
+    "frontend/src/index.css",
+    "frontend/src/main.tsx",
+    "frontend/tailwind.config.js",
+    "project_state.json"
+  ]
+}

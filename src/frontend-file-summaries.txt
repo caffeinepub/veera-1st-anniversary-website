@@ -1,0 +1,11 @@
+{
+  "frontend/src/index.css": "Global styles with warm cream/tan/brown OKLCH color palette for book aesthetic, custom shadows, and page transition animations.",
+  "frontend/tailwind.config.js": "Extended Tailwind configuration with warm color tokens, custom shadows for book depth, and page-turn animation keyframes.",
+  "frontend/src/App.tsx": "Main app component that renders the Book component and footer with caffeine.ai attribution.",
+  "frontend/src/components/book/Book.tsx": "Core book container managing page state, navigation controls, and page transition animations with forward/backward direction support.",
+  "frontend/src/components/book/pages/CoverPage.tsx": "Book cover page featuring VEERA's name, anniversary title, decorative elements, and cover image with \"Open Our Story\" button.",
+  "frontend/src/components/book/pages/MessagePage.tsx": "Heartfelt anniversary message page with decorative elements and romantic letter-style content for VEERA.",
+  "frontend/src/components/book/pages/MemoriesPage.tsx": "Scrapbook-style page displaying six memorable moments from the first year with icons and descriptions.",
+  "frontend/src/components/book/pages/ClosingPage.tsx": "Final page with warm closing message, anniversary wishes, and option to return to cover.",
+  "frontend/src/hooks/useQueries.ts": "Minimal placeholder file as the static anniversary website requires no backend data fetching."
+}

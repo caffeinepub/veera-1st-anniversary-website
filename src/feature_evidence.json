@@ -1,0 +1,87 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-create-a-single-page-anniversary-website-that-celebrates-the-user-s-1st-completed-year-of-relationship-and-explicitly-includes-the-name-veera-in-the-hero-message",
+      "featureTitle": "Create a single-page anniversary website that celebrates the user's 1st completed year of relationship and explicitly includes the name “VEERA” in the hero message.",
+      "files": [
+        "frontend/index.html",
+        "frontend/src/App.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-a-book-inspired-ui-layout-a-cover-section-and-multiple-pages-that-the-user-can-navigate-through-e-g-next-previous-buttons-or-page-indicators-with-a-cute-aesthetic",
+      "featureTitle": "Implement a book-inspired UI layout: a ‘cover’ section and multiple ‘pages’ that the user can navigate through (e.g., next/previous buttons or page indicators), with a cute aesthetic.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/book/Book.tsx",
+        "frontend/src/components/book/pages/ClosingPage.tsx",
+        "frontend/src/components/book/pages/CoverPage.tsx",
+        "frontend/src/components/book/pages/MemoriesPage.tsx",
+        "frontend/src/components/book/pages/MessagePage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-a-coherent-visual-theme-and-styling-system-consistent-across-the-site-colors-typography-spacing-components-that-matches-a-cute-cozy-book-paper-aesthetic-avoid-blue-purple-as-primary-colors",
+      "featureTitle": "Add a coherent visual theme and styling system consistent across the site (colors, typography, spacing, components) that matches a cute, cozy, book/paper aesthetic (avoid blue/purple as primary colors).",
+      "files": [
+        "frontend/src/components/book/Book.tsx",
+        "frontend/src/index.css",
+        "frontend/tailwind.config.js"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-include-lightweight-decorative-visuals-e-g-book-cover-illustration-subtle-paper-texture-background-small-doodle-icons-as-static-assets-and-use-them-in-the-ui",
+      "featureTitle": "Include lightweight decorative visuals (e.g., book cover illustration, subtle paper texture background, small doodle icons) as static assets and use them in the UI.",
+      "files": [
+        "frontend/src/components/book/pages/CoverPage.tsx",
+        "frontend/src/components/book/pages/MemoriesPage.tsx",
+        "frontend/src/components/book/pages/MessagePage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-4"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

@@ -1,0 +1,136 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Cute book-aesthetic 1-year anniversary single-page site for VEERA",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Build a single-page anniversary landing experience with an English hero message that prominently includes “VEERA” and celebrates the 1-year milestone.",
+      "acceptanceCriteria": [
+        "Landing view contains the name “VEERA” prominently.",
+        "Landing view clearly states it is a 1-year anniversary/1st year celebration message in English.",
+        "All user-facing text is in English."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "create",
+          "description": "Create the single-page App shell that renders the book experience and includes an above-the-fold hero message prominently featuring “VEERA” and an explicit 1-year anniversary celebration line in English. Wire in the main Book component and ensure no additional routes/pages are introduced."
+        },
+        {
+          "path": "frontend/index.html",
+          "operation": "modify",
+          "description": "Ensure the document title and metadata align with the 1-year anniversary theme for VEERA (English-only user-facing text)."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Implement a book-inspired UI with a distinct cover and at least three inner pages with clear navigation and book-like transitions on mobile and desktop.",
+      "acceptanceCriteria": [
+        "UI includes a distinct cover-like first view and at least 3 inner pages (e.g., Message, Memories, Closing).",
+        "User can navigate between pages with clear controls (Next/Previous and/or page dots).",
+        "Page transitions feel book-like (e.g., page flip/slide) and are responsive on mobile and desktop."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/book/Book.tsx",
+          "operation": "create",
+          "description": "Create the core Book container that manages current page state (cover + 3+ inner pages), renders page indicators, and provides Next/Previous controls. Use the shadcn-ui Button component for navigation controls (Verify the component's usage instructions before implementing). Add responsive book-like transitions (page flip/slide feel) using Tailwind utility classes and minimal custom CSS classes."
+        },
+        {
+          "path": "frontend/src/components/book/pages/CoverPage.tsx",
+          "operation": "create",
+          "description": "Create the cover view with a cover-like layout (title, subtitle, decorative illustration) and an obvious control to open/continue into the book. Ensure the cover text includes VEERA and the 1-year celebration messaging in English."
+        },
+        {
+          "path": "frontend/src/components/book/pages/MessagePage.tsx",
+          "operation": "create",
+          "description": "Create an inner page for a heartfelt anniversary message (English-only), laid out like a storybook page (paper panel, headings, small doodle accents)."
+        },
+        {
+          "path": "frontend/src/components/book/pages/MemoriesPage.tsx",
+          "operation": "create",
+          "description": "Create an inner page for a short 'memories' section (English-only) with a cozy, scrapbook-like layout (cards/panels). Use shadcn-ui Card (or equivalent shadcn-ui surface component) if available (Verify the component's usage instructions before implementing)."
+        },
+        {
+          "path": "frontend/src/components/book/pages/ClosingPage.tsx",
+          "operation": "create",
+          "description": "Create a closing inner page (English-only) with a warm sign-off, optional 'back to cover' action, and a final decorative motif."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire the new Book component into the App so the entire experience remains a single page and is directly reachable at the app root."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Apply a consistent, accessible cute/cozy storybook theme (warm tones, storybook typography, consistent components) avoiding blue/purple as primary colors.",
+      "acceptanceCriteria": [
+        "Theme uses warm/cozy tones (e.g., cream, tan, soft browns) with consistent typography resembling a storybook/handwritten feel.",
+        "All pages share consistent component styling (buttons, headings, cards/panels).",
+        "Design is accessible: text contrast is readable and layout works on small screens."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "create",
+          "description": "Create global styling for the book/paper aesthetic: warm background, readable foreground, consistent spacing defaults, and typography stacks that feel storybook-like (without relying on external integrations). Define CSS variables that map to Tailwind/shadcn tokens (background/foreground/primary/etc.) using warm cream/tan/brown hues and ensure accessible contrast."
+        },
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Extend Tailwind theme to support the cozy book palette and reusable styling primitives (e.g., additional warm color tokens, shadows for paper depth, animation utilities for page transitions) while keeping blue/purple out of primary styling."
+        },
+        {
+          "path": "frontend/src/components/book/Book.tsx",
+          "operation": "modify",
+          "description": "Apply consistent component styling (buttons, page panels, headings) across cover and inner pages using Tailwind utilities and existing shadcn-ui components where appropriate (Verify the component's usage instructions before implementing). Ensure responsive layout and readable text contrast on small screens."
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Add and wire static decorative visuals (cover illustration, paper texture background, doodle icons) from generated assets into the UI without backend image serving.",
+      "acceptanceCriteria": [
+        "Generated images are stored under frontend/public/assets/generated and referenced directly by the frontend (no backend image serving).",
+        "At least one decorative image appears on the cover and at least one subtle texture/background element appears on inner pages.",
+        "Images are optimized for web display and do not break layout on mobile."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/public/assets/generated/anniversary-cover.dim_1600x900.png",
+          "operation": "create",
+          "description": "Add the generated cover illustration asset at this exact path so it can be referenced directly by the frontend (no backend involvement)."
+        },
+        {
+          "path": "frontend/public/assets/generated/paper-texture.dim_2048x2048.png",
+          "operation": "create",
+          "description": "Add the generated seamless paper texture asset at this exact path for use as subtle backgrounds on inner pages."
+        },
+        {
+          "path": "frontend/public/assets/generated/doodles-set.dim_1024x1024.png",
+          "operation": "create",
+          "description": "Add the generated doodles set sprite/atlas asset at this exact path for small decorative accents throughout the UI."
+        },
+        {
+          "path": "frontend/src/components/book/pages/CoverPage.tsx",
+          "operation": "modify",
+          "description": "Reference frontend/public/assets/generated/anniversary-cover.dim_1600x900.png as a decorative visual on the cover. Ensure responsive sizing so it never overflows or breaks layout on mobile."
+        },
+        {
+          "path": "frontend/src/components/book/pages/MessagePage.tsx",
+          "operation": "modify",
+          "description": "Use frontend/public/assets/generated/paper-texture.dim_2048x2048.png as a subtle background/texture element on the page surface. Add small doodle accents by referencing frontend/public/assets/generated/doodles-set.dim_1024x1024.png in a lightweight, non-intrusive way."
+        },
+        {
+          "path": "frontend/src/components/book/pages/MemoriesPage.tsx",
+          "operation": "modify",
+          "description": "Add at least one decorative doodle accent using frontend/public/assets/generated/doodles-set.dim_1024x1024.png and ensure images remain optimized in layout (no large unbounded rendering) for mobile and desktop."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "backend/main.mo": "Empty Motoko actor with no logic.",
+  "feature_evidence.json": "Reports feature-to-file mappings and components used for building the anniversary website.",
+  "frontend-file-summaries.txt": "Prewritten summaries describing each frontend file’s purpose and functionality.",
+  "frontend/index.css": "Tailwind base setup with custom OKLCH color variables and global theming for light and dark modes.",
+  "frontend/index.html": "HTML entry point that mounts the React app and loads main.tsx.",
+  "frontend/src/App.tsx": "Renders the Book component and footer with caffeine.ai attribution.",
+  "frontend/src/components/book/Book.tsx": "Manages page navigation and animations across the book-style multi-page layout.",
+  "frontend/src/components/book/pages/ClosingPage.tsx": "Final page with decorative icons, farewell messages, and a button returning to the cover.",
+  "frontend/src/components/book/pages/CoverPage.tsx": "Book cover page showing title, VEERA’s name, an image, and an 'Open Our Story' button.",
+  "frontend/src/components/book/pages/MemoriesPage.tsx": "Displays a grid of six themed memories with icons and descriptions.",
+  "frontend/src/components/book/pages/MessagePage.tsx": "Romantic letter-style page addressed to VEERA with decorative elements.",
+  "frontend/src/hooks/useActor.ts": "Creates and caches a backend actor based on the current Internet Identity and invalidates all non-actor queries when the actor changes.",
+  "frontend/src/hooks/useInternetIdentity.ts": "Provides context and hooks for managing Internet Identity authentication, including login, logout, and loading stored identities.",
+  "frontend/src/hooks/useQueries.ts": "Empty placeholder file noting that no backend queries are needed for the static site.",
+  "frontend/src/index.css": "Defines Tailwind base styles and custom themed variables for a warm book-like aesthetic along with utility classes like shadows and handwriting font.",
+  "frontend/src/main.tsx": "Bootstraps the React app with React Query and Internet Identity providers and loads global styles.",
+  "frontend/tailwind.config.js": "Configures Tailwind with custom colors, animations, typography, and container settings matching the site's book aesthetic.",
+  "project_state.json": "Stores metadata about the project state, features, and image requirements for the anniversary website."
+}
